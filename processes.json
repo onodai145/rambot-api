@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "rembot-api",
+      "script": "bin/www",
+      "error_file": "logs/stderr.log",
+      "out_file": "logs/stdout.log",
+      "merge_logs": true,
+      "exec_mode": "fork",
+      "autorestart": true,
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
