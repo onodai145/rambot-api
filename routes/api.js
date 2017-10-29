@@ -4,6 +4,10 @@ var mongodb = require('mongodb');
 var config = require('config');
 
 mongodb.MongoClient.connect("mongodb://"+config.db.host+":"+config.db.port+"/"+config.db.dbName , function(err, database) {
+  if(err)
+  {
+    console.log(err);
+  }
   users = database.collection("users");
 });
 
